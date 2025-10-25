@@ -51,7 +51,7 @@ module "eks" {
       instance_types = var.aws_eks_managed_node_groups_instances_types
       capacity_type  = "ON_DEMAND"
     }
-    tags = var.aws_project_tags
+      tags = var.aws_project_tags
   }
-  tags = var.aws_project_tags
+      tags = var.aws_project_tags
 }
