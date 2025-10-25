@@ -19,6 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5    
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.0
+
       - name: terraform init
         working-directory: .
         run: terraform init -backend-config="bucket=${{secrets.AWS_BUCKET_NAME}}" -backend-config="key=${{secrets.AWS_BUCKET_FILE}}" 
