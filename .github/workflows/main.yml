@@ -24,5 +24,5 @@ jobs:
         run: terraform init -backend-config="bucket=${{secrets.AWS_BUCKET_NAME}}" -backend-config="key=${{secrets.AWS_BUCKET_FILE}}" 
 
       - name: terraform apply
-        working-directory: ./src
+        working-directory: .
         run: terraform apply --auto-aprove
